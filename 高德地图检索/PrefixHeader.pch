@@ -1,0 +1,38 @@
+//
+//  PrefixHeader.pch
+//  youwan
+//
+//  Created by 张艳江 on 2018/4/28.
+//  Copyright © 2018年 张艳江. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "MJExtension.h"
+#import "ZYJModel.h"
+#import "UIView+View.h"
+#import "Masonry.h"
+
+#pragma mark ------- 定义屏幕宽度,比例------
+#define ScreenH           ([UIScreen mainScreen].bounds.size.height)
+#define ScreenW           ([UIScreen mainScreen].bounds.size.width)
+#define Scale_W           (float)ScreenW/375.f
+#define Scale_H           (float)ScreenH/667.f
+
+//色值
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define RGB(r,g,b) RGBA(r,g,b,1.0f)
+//全局背景色
+#define BGColor           RGB(245, 245, 245)
+//导航的色值
+#define MaingroundColor   RGB(250, 123, 34)
+//请求加密时的key值
+#define k_ey              @"DMC5Cv8KDGgGPhli"
+//头像、昵称、token
+#define avatar            [[NSUserDefaults standardUserDefaults] objectForKey:@"avatar"]
+#define nickname          [[NSUserDefaults standardUserDefaults] objectForKey:@"nickname"]
+#define t_oken             [[NSUserDefaults standardUserDefaults] objectForKey:@"sqyl_token"]
+
+
+#endif /* PrefixHeader_pch */
